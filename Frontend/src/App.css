@@ -1,0 +1,113 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,html, #root{
+  height: 100%;
+  width : 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  background-color : black;
+}
+
+main .left{
+  height: 100%;
+  flex-basis: 50%;
+  background-color: rgba(37, 31, 60, 0.626);
+  border-radius: 10px;
+  position: relative;
+  color: white;
+  font-size: 15px;
+  padding: 1rem;
+}
+
+main .right{
+  /* font-family: '"Fira code", "Fira Mono", monospace'; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  height: 100%;
+  flex-basis: 50%;
+  background-color: rgb(21, 21, 21);
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  overflow: auto;
+  color: white;
+}
+
+.left .code{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 10px;
+}
+
+
+
+.btn{
+  padding: 10px 20px;
+  border-radius: 10px ;
+  background-color: rgb(21, 21, 21);
+  border: 1px solid white;
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover{
+  background-color: white;
+  color: #000000;
+  transform: scale(1.1);
+  border: 1px solid transparent;
+}
+
+.loading {
+  font-family: 'sen', sans-serif;
+
+  font-size: 18px;
+  font-weight: bold;
+  color: rgba(246, 242, 242, 0.653);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Add a simple animation */
+.loading::after {
+  content: " .";
+  animation: dots 1.5s steps(3, end) infinite;
+}
+
+@keyframes dots {
+  0% {
+    content: " .";
+  }
+  33% {
+    content: " ..";
+  }
+  66% {
+    content: " ...";
+  }
+  100% {
+    content: " .";
+  }
+}
+
+.code textarea {
+  border: none !important;
+  outline: none !important;
+}
+
